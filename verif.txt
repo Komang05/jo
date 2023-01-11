@@ -41,3 +41,17 @@ if (!isGroupAdmins) return diablobotwhatsapp.reply(`sorry anda sepertinya bukan 
  diablobotwhatsapp.reply(util.format(JSON.parse(res.data.replace("for (;;);", ""))))
  }
  break
+
+
+// 𝘼𝙪𝙩𝙤 𝙍𝙚𝙖𝙙 𝙂𝙘
+var ampun = await ranz.chats.array.filter(v => v.jid.endsWith('g.us'))
+ampun.map( async ({ jid }) => {
+if (readGc === false) return
+await ranz.chatRead(jid)
+})
+// 𝘼𝙪𝙩𝙤 𝙍𝙚𝙖𝙙 𝙋𝙘
+var chatss = await ranz.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net'))
+chatss.map( async ({ jid }) => {
+if (readPc === false) return
+await ranz.chatRead(jid)
+})
